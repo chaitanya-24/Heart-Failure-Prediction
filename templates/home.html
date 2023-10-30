@@ -1,0 +1,130 @@
+<html>
+
+    <head>
+        <title>Heart Failure Prediction</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <body>
+            <h1 class="mx-auto p-2">Heart Failure Prediction</h1>
+
+
+            <form action="{{ url_for('predict_data') }}" method="post">
+                
+                <div class="row p-4 m-0">
+                    <div class="col">
+                      <input type="text" name="age" class="form-control" placeholder="Age" aria-label="Age">
+                    </div>
+                    <div class="col">
+                        <select class="form-control" name="sex" placeholder="Enter you Gender" required>
+                            <option class="placeholder" selected disabled value="">Sex</option>
+                            <option value="male">
+                                M
+                            </option>
+                            <option value="female">
+                                F
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row p-4 m-0">
+                    <div class="col">
+                        <select class="form-control" name="chestpaintype" placeholder="Chest Pain Type" required>
+                            <option class="placeholder" selected disabled value="">Chest Pain Type</option>
+                            <option value="TA">
+                                TA
+                            </option>
+                            <option value="ATA">
+                                ATA
+                            </option>
+                            <option value="NAP">
+                                NAP
+                            </option>   
+                            <option value="ASY">
+                                ASY
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col">
+                      <input type="text" name="resting_bp" class="form-control" placeholder="Resting BP" aria-label="Resting BP">
+                    </div>
+                </div>
+
+                <div class="row p-4 m-0">
+                    <div class="col">
+                      <input type="text" name="cholesterol" class="form-control" placeholder="Cholesterol" aria-label="Cholesterol">
+                    </div>
+                    <div class="col">
+                      <input type="text" name="fasting_bs" class="form-control" placeholder="Fasting BS" aria-label="Fasting BS">
+                    </div>
+                </div>
+
+                <div class="row p-4 m-0">
+                    <div class="col">
+                        <select class="form-control" name="resting_ecg" placeholder="Resting ECG" required>
+                            <option class="placeholder" selected disabled value="">Resting ECG</option>
+                            <option value="Normal">
+                                Normal
+                            </option>
+                            <option value="ST">
+                                ST
+                            </option>
+                            <option value="LVH">
+                                LVH
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col">
+                      <input type="text" name="max_hr" class="form-control" placeholder="Max HR" aria-label="Max HR">
+                    </div>
+                </div> 
+
+                <div class="row p-4 m-0">
+                    <div class="col">
+                        <select class="form-control" name="exercise_angina" placeholder="Exercise Angina" required>
+                            <option class="placeholder" selected disabled value="">Exercise Angina</option>
+                            <option value="N">
+                                N
+                            </option>
+                            <option value="Y">
+                                Y
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col">
+                      <input type="text" name="oldpeak" class="form-control" placeholder="Old Peak" aria-label="Old Peak">
+                    </div>
+                </div> 
+
+                <div class="row p-4 m-0">
+                    <div class="col">
+                        <select class="form-control" name="st_slope" placeholder="ST Slope" required>
+                            <option class="placeholder" selected disabled value="">ST Slope</option>
+                            <option value="Flat">
+                                Flat
+                            </option>
+                            <option value="Up">
+                                Up
+                            </option>
+                            <option value="Down">
+                                Down
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row p-4 m-0">
+                    <div class="col">
+                        <input class="btn btn-primary" type="submit" value="Result" required />
+                    </div>
+                </div>
+            </form>
+
+            <h3 class="px-4 pb-2">
+                <small class="text-body-secondary">{{predicted_text}}</small>
+            </h3>
+
+
+    </body>
+</html>
