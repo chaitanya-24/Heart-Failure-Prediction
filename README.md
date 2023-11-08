@@ -53,3 +53,7 @@ To use the project, you need to follow these steps:
 - The prediction result will show the presence of heart disease in the patient, it simply gives a message if heart disease is predicted or not.
 - You can change your input values and click on the "Result" button again to get a new prediction result.
 
+## Vidoe Demonstration
+
+https://github.com/chaitanya-24/Heart-Failure-Prediction/assets/62403348/af1ad2d0-5190-4d36-8571-0e7c364e314d
+
