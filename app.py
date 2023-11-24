@@ -12,11 +12,11 @@ application = Flask(__name__)
 
 app = application
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
-@app.route('/predictdata', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def predict_data():
     if request.method=="GET":
         return render_template('home.html')
@@ -52,6 +52,8 @@ def predict_data():
             predicted_text = "Heart Disease Predicted"
         else:
             predicted_text = "Heart Disease Not Predicted"
+
+        print(predicted_text)
 
         return render_template('home.html', predicted_text=predicted_text)
     
