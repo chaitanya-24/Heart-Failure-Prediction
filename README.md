@@ -1,6 +1,6 @@
 # Heart Failure Prediction
 
-This project is a web application that uses machine learning to predict the presence of heart disease in the patient based on various clinical features. The project was created by **Chaitanya Sawant**, a student of **G N Khalsa College, Mumbai**.
+This project is a web application that uses machine learning to predict the presence of heart disease in the patient based on various clinical features.
 
 ## Motivation
 
