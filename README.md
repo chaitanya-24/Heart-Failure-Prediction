@@ -79,7 +79,7 @@ Contributions are what makes the open-source community such an amazing place to 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-## Front End of Project
+## Images
 ![h1](https://github.com/chaitanya-24/Heart-Failure-Prediction/assets/62403348/316f65cd-61d4-4bc7-ad8f-9dcffb1e8ffc)
 ![H2](https://github.com/chaitanya-24/Heart-Failure-Prediction/assets/62403348/ea992caf-3c14-4752-bd49-7a2f23174d84)
 ![H3](https://github.com/chaitanya-24/Heart-Failure-Prediction/assets/62403348/32b5945c-b3d5-4ba1-806a-480d193be55f)
