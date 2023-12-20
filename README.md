@@ -83,13 +83,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Chaitanya Sawant - [@chaitanya-24](https://github.com/chaitanya-24)
 
 Project Link: [https://github.com/chaitanya-24/Heart-Failure-Prediction](https://github.com/chaitanya-24/Heart-Failure-Prediction)
-
-
-
-
-
-
-
-
-
-802898747809.dkr.ecr.us-east-1.amazonaws.com/heartfailurepred
