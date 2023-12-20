@@ -36,7 +36,7 @@ To get a local copy up and running follow these simple steps:
    ```sh
    python main.py
    ```
-4. Open your browser and type http://127.0.0.1:5000/ in the address bar.
+4. Open your browser and type http://127.0.0.1:8080/ in the address bar.
 
 ## Usage
 
@@ -58,7 +58,7 @@ The project can be run using Docker. To run the project using Docker, follow the
    ```sh
    docker run -p 5000:5000 heart-failure-prediction
    ```
-4. Open your browser and type http://127.0.0.1:5000/ in the address bar.
+4. Open your browser and type http://127.0.0.1:8080/ in the address bar.
 
 ## Github Actions
 
@@ -77,9 +77,3 @@ Contributions are what makes the open-source community such an amazing place to 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Chaitanya Sawant - [@chaitanya-24](https://github.com/chaitanya-24)
-
-Project Link: [https://github.com/chaitanya-24/Heart-Failure-Prediction](https://github.com/chaitanya-24/Heart-Failure-Prediction)
