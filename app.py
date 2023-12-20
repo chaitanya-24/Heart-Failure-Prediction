@@ -19,7 +19,7 @@ app = application
 @app.route('/', methods=['GET', 'POST'])
 def predict_data():
     if request.method=="GET":
-        return render_template('home.html')
+        return render_template('index(1).html')
 
 
     else:
@@ -55,8 +55,8 @@ def predict_data():
 
         print(predicted_text)
 
-        return render_template('home.html', predicted_text=predicted_text)
-    
+        return render_template('index(1).html', predicted_text=predicted_text)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=5000)

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Colorlib Templates" />
+    <meta name="author" content="Colorlib" />
+    <meta name="keywords" content="Colorlib Templates" />
+
+    <!-- Title Page-->
+    <title>Heart Failure Prediction</title>
+    <link rel="icon" type="image/x-icon" href="static\img\heart.svg" />
+
+    <style>
+      .header-text {
+        text-align: center;
+        color: bisque;
+        position: absolute;
+        top: 2rem;
+        left: 35rem;
+      }
+
+      .socials {
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+        padding: 0.5rem;
+      }
+
+      .socials .linkedin {
+        background-color: bisque;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: large;
+      }
+
+      .linkedin b a {
+        text-decoration: none;
+      }
+
+      .socials .github {
+        background-color: bisque;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: large;
+      }
+
+      .github b a {
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- Icons font CSS-->
+    <link
+      href="static/vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="static/vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+      href="static/vendor/select2/select2.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="static/vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="static/css/main.css" rel="stylesheet" media="all" />
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="header-text">
+        <h1><b>Heart Failure Prediction</b></h1>
+        <h4>A web application that checks for heart failure</h4>
+      </div>
+
+      <div class="socials">
+        <button class="github">
+          <b
+            ><a
+              href="https://github.com/chaitanya-24/Heart-Failure-Prediction"
+              target="_blank"
+              >Github</a
+            ></b
+          >
+        </button>
+        <button class="linkedin">
+          <b
+            ><a
+              href="https://www.linkedin.com/in/chaitanyasawant/"
+              target="_blank"
+              >LinkedIn</a
+            ></b
+          >
+        </button>
+      </div>
+      <form action="{{ url_for('predict_data') }}" method="post" class="py-3">
+        <div class="wrapper wrapper--w680">
+          <div class="card card-4">
+            <div class="card-body">
+              <h2 class="title">Please Fill The Information</h2>
+              <form method="POST">
+                <div class="row row-space">
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Age</label>
+                      <input class="input--style-4" type="text" name="age" />
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Sex</label>
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="sex">
+                          <option disabled="disabled" selected="selected">
+                            Choose option
+                          </option>
+                          <option value="male">M</option>
+                          <option value="female">F</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2nd Row -->
+                <div class="row row-space">
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Chest Pain Type</label>
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="chestpaintype">
+                          <option disabled="disabled" selected="selected">
+                            Choose option
+                          </option>
+                          <option value="TA">TA</option>
+                          <option value="ATA">ATA</option>
+                          <option value="NAP">NAP</option>
+                          <option value="ASY">ASY</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Resting BP</label>
+                      <input
+                        class="input--style-4"
+                        type="text"
+                        name="resting_bp"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- 3rd Row -->
+                <div class="row row-space">
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Cholesterol</label>
+                      <input
+                        class="input--style-4"
+                        type="text"
+                        name="cholesterol"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Fasting BS</label>
+                      <input
+                        class="input--style-4"
+                        type="text"
+                        name="fasting_bs"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- 4th Row -->
+                <div class="row row-space">
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Resting ECG</label>
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="resting_ecg">
+                          <option disabled="disabled" selected="selected">
+                            Choose option
+                          </option>
+                          <option value="Normal">Normal</option>
+                          <option value="ST">ST</option>
+                          <option value="LVH">LVH</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Max HR</label>
+                      <input class="input--style-4" type="text" name="max_hr" />
+                    </div>
+                  </div>
+                </div>
+                <!-- 5th Row -->
+                <div class="row row-space">
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Exercise Angina</label>
+                      <div
+                        class="rs-select2 js-select-simple select--no-search"
+                      >
+                        <select name="exercise_angina">
+                          <option disabled="disabled" selected="selected">
+                            Choose option
+                          </option>
+                          <option value="N">N</option>
+                          <option value="Y">Y</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="input-group">
+                      <label class="label">Old Peak</label>
+                      <input
+                        class="input--style-4"
+                        type="text"
+                        name="oldpeak"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- 6th Row -->
+
+                <div class="input-group">
+                  <label class="label">ST Slope</label>
+                  <div class="rs-select2 js-select-simple select--no-search">
+                    <select name="st_slope">
+                      <option disabled="disabled" selected="selected">
+                        Choose option
+                      </option>
+                      <option value="Flat">Flat</option>
+                      <option value="Up">Up</option>
+                      <option value="Down">Down</option>
+                    </select>
+                    <div class="select-dropdown"></div>
+                  </div>
+                </div>
+                <div class="p-t-15">
+                  <button class="btn btn--radius-2 btn--blue" type="submit">
+                    Predict
+                  </button>
+                </div>
+              </form>
+
+              <h3 class="px-4 pb-2"  style="text-align: center; margin-top: 1rem; font-size: xx-large;">
+                <larger class="text-body-secondary">{{predicted_text}}</larger>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="static/vendor/select2/select2.min.js"></script>
+    <script src="static/vendor/datepicker/moment.min.js"></script>
+    <script src="static/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="static/js/global.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->
