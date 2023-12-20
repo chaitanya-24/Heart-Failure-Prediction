@@ -8,6 +8,8 @@ from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 import warnings
 warnings.filterwarnings('ignore')
 
+
+
 application = Flask(__name__)
 
 app = application
